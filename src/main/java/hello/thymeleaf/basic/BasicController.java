@@ -49,6 +49,13 @@ public class BasicController {
         return "basic/variable";
     }
 
+    @GetMapping("/link")
+    public String link(Model model){
+        model.addAttribute("param1","data1");
+        model.addAttribute("param2","data2");
+
+        return "basic/link";
+    }
     @GetMapping("/basic-objects")
     public String basicObjects(Model model, HttpServletRequest request, HttpServletResponse response, HttpSession session){
         session.setAttribute("sessionData", "Hello Session");
