@@ -71,6 +71,11 @@ public class BasicController {
 
         return "basic/operation";
     }
+
+    @GetMapping("/attribute")
+    public String attribute(){
+        return "basic/attribute";
+    }
     @GetMapping("/basic-objects")
     public String basicObjects(Model model, HttpServletRequest request, HttpServletResponse response, HttpSession session){
         session.setAttribute("sessionData", "Hello Session");
